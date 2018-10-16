@@ -1,0 +1,26 @@
+body{
+    margin: 0px;
+}
+
+
+#topBlock{
+    background: #4A90E2;
+    height: 75px;
+    text-align: center;
+}
+
+.bookMark{
+    background: #4A90E2;
+    color: #00408B;
+    text-align: center;
+    font-size: 24px;
+    height: 75px;
+    width: 220px;
+    border:none;
+}
+
+.select_bookMark{
+    color: #ffffff;
+    height: 70px;
+    border-bottom:solid 5px #00408B;
+}
