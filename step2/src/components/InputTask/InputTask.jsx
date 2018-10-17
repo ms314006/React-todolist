@@ -1,14 +1,19 @@
 import React from "react"
+import { InputTasksForm } from "../InputTasksForm"
 
-class InputTask extends React.Component{
-    render(){
-        return(
+class InputTask extends React.Component {
+    render() {
+        return (
             <div>
-                <button type="button" class="addButton cancelButton" 
-                        onClick={this.props.closeAdd}> Ｘ Cancel</button>
-                <button type="button" class="addButton saveButton"> ＋ Save</button>
+                <div class="inputTaskTitle">
+                    <input type="checkbox" class="taskChk" />
+                    <input type="text" class="taskTitle" placeholder="Type Something Here…"  />
+                    <i class="far fa-star fa-lg icon"></i>
+                    <i class="fas fa-pen fa-lg icon icon_edit"></i>
+                </div>
+                <InputTasksForm closeAdd={this.props.closeAdd} />
             </div>)
     }
 }
 
-export {InputTask}
+export { InputTask }
