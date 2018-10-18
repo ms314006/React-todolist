@@ -27,6 +27,7 @@ body{
     border-bottom:solid 5px #00408B;
 }
 
+
 .content{
     text-align: center;
 }
@@ -40,11 +41,15 @@ body{
     border-radius: 5px;
 }
 
-.InputTask{
+.InputTasksForm{
+    text-align: center;
     width: 620px;
+    margin: 0 auto;
+}
+
+.InputTask{
     height: 385px;
     background: #F2F2F2;
-    margin:0 auto;
     text-align: left;
 }
 
@@ -55,23 +60,6 @@ body{
     margin:0px auto;
     text-align: left;
     border-bottom:solid 3px #C8C8C8 ;
-}
-
-.inputName{
-    margin-left: 50px;
-}
-
-.inputForm{
-    margin-left: 75px;
-}
-
-.inputFont{
-    font-size: 16px;
-}
-
-.inputDateTime{
-    height: 35px;
-    width: 162px;
 }
 
 .taskTitle{
@@ -94,6 +82,25 @@ body{
 
 .icon_edit{
     color: #4A90E2;
+}
+
+.inputName{
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.inputForm{
+    padding-left: 75px;
+}
+
+.inputStyle{
+    border:none;
+    font-size: 16px;
+}
+
+.inputDateTime{
+    height: 35px;
+    width: 162px;
 }
 
 .addButton{
