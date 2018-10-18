@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    background: #E1E1E1;
 }
 
 
@@ -7,6 +8,7 @@ body{
     background: #4A90E2;
     height: 75px;
     text-align: center;
+    margin-bottom: 24px;
 }
 
 .bookMark{
