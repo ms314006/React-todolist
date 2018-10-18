@@ -32,6 +32,15 @@ body{
     text-align: center;
 }
 
+#addTask{
+    width: 620px;
+    height: 65px;
+    font-size: 24px;
+    color: #C8C8C8;
+    border: 2px solid #C8C8C8;
+    border-radius: 5px;
+}
+
 .InputTasksForm{
     width: 620px;
     margin: 0 auto;

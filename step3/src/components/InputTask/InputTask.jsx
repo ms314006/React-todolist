@@ -11,7 +11,7 @@ class InputTask extends React.Component {
                     <i class="far fa-star fa-lg icon"></i>
                     <i class="fas fa-pen fa-lg icon icon_edit"></i>
                 </div>
-                <InputTasksForm  />
+                <InputTasksForm closeAdd={this.props.closeAdd} />
             </div>)
     }
 }

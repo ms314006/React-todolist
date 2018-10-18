@@ -1,6 +1,7 @@
 import React from "react"
 import { HashRouter,Route } from "react-router-dom"
 import { TopBlock } from "../TopBlock"
+import { MyTasks } from "../MyTasks"
 
 class Main extends React.Component {
     render() {
@@ -8,6 +9,7 @@ class Main extends React.Component {
             <HashRouter>
                 <div>
                     <TopBlock />
+                    <Route exact path="/" component={MyTasks} />
                 </div>
             </HashRouter>
         )
