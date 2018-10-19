@@ -4,7 +4,7 @@ import {AddTask} from "../AddTask"
 class MyTasks extends React.Component{
     render(){
         return (
-            <div class="content">
+            <div class="alignCenter">
                 <AddTask />
             </div>
         )

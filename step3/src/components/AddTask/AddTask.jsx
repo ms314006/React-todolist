@@ -3,12 +3,6 @@ import {InputTask} from "../InputTask"
 
 class AddTask extends React.Component{
 
-    constructor(props){
-        super(props)
-        this.openAdd=this.openAdd.bind(this)
-        this.closeAdd=this.closeAdd.bind(this)
-    }
-
     openAdd(){
         document.getElementById('addTask').style.display='none'
         document.getElementById('inputTask').style.display=''
@@ -17,7 +11,6 @@ class AddTask extends React.Component{
     closeAdd(){
         document.getElementById('addTask').style.display=''
         document.getElementById('inputTask').style.display='none'
-    
     }
 
     render(){

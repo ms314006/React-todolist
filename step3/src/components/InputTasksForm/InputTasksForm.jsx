@@ -27,7 +27,7 @@ class InputTasksForm extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <button type="button" class="addButton cancelButton"> Ｘ Cancel</button>
+                    <button type="button" class="addButton cancelButton" onClick={this.props.closeAdd}> Ｘ Cancel</button>
                     <button type="button" class="addButton saveButton"> ＋ Save</button>
                 </div>
             </div>
