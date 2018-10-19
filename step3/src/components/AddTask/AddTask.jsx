@@ -2,11 +2,6 @@ import React from "react"
 import {InputTask} from "../InputTask"
 
 class AddTask extends React.Component{
-    constructor(props){
-        super(props)
-        this.closeAdd = this.closeAdd.bind(this)
-        this.openAdd = this.openAdd.bind(this)
-    }
 
     openAdd(){
         document.getElementById('addTask').style.display='none'
