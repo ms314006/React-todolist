@@ -9,7 +9,6 @@ class AddTask extends React.Component{
     }
 
     closeAdd(){
-        console.log('eee')
         document.getElementById('addTask').style.display=''
         document.getElementById('inputTask').style.display='none'
     }
