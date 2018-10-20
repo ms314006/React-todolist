@@ -1,0 +1,121 @@
+body{
+    margin: 0px;
+    background: #E1E1E1;
+}
+
+
+#topBlock{
+    background: #4A90E2;
+    height: 75px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.bookMark{
+    background: #4A90E2;
+    color: #00408B;
+    text-align: center;
+    font-size: 24px;
+    height: 75px;
+    width: 220px;
+    border:none;
+}
+
+.select_bookMark{
+    color: #ffffff;
+    height: 70px;
+    border-bottom:solid 5px #00408B;
+}
+
+
+.alignCenter{
+    text-align: center;
+}
+
+#addTask{
+    width: 620px;
+    height: 65px;
+    font-size: 24px;
+    color: #C8C8C8;
+    border: 2px solid #C8C8C8;
+    border-radius: 5px;
+}
+
+.InputTasksForm{
+    width: 620px;
+    margin: 0 auto;
+}
+
+.InputTask{
+    height: 385px;
+    background: #F2F2F2;
+    text-align: left;
+}
+
+.inputTaskTitle{
+    width: 620px;
+    height: 75px;
+    background: #F2F2F2;
+    margin:0px auto;
+    text-align: left;
+    border-bottom:solid 3px #C8C8C8 ;
+}
+
+.taskTitle{
+    background: #F2F2F2;
+    border:none;
+    height: 28px;
+    width: 380px;
+    font-size: 24px;
+    margin: 25px;
+}
+
+.taskChk{
+    margin-left: 20px;
+    zoom: 2;
+}
+
+.icon{
+    margin-left: 20px;
+}
+
+.icon_edit{
+    color: #4A90E2;
+}
+
+.inputName{
+    padding-left: 50px;
+    padding-top: 25px;
+}
+
+.inputForm{
+    padding-left: 75px;
+}
+
+.inputStyle{
+    border:none;
+    font-size: 16px;
+}
+
+.inputDateTime{
+    height: 35px;
+    width: 162px;
+}
+
+.addButton{
+    width: 310px;
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+    border:none;
+}
+
+.saveButton{
+    background: #4A90E2;
+    color: #ffffff;
+}
+
+.cancelButton{
+    background: #fffffd;
+    color: #D0021B;
+}
