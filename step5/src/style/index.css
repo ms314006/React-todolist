@@ -119,3 +119,16 @@ body{
     background: #fffffd;
     color: #D0021B;
 }
+
+.complete{
+    text-decoration: line-through;
+    color: #9B9B9B;
+}
+
+.important{
+    background: #FFF2DC;
+}
+
+.iconImportant{
+    color: #F5A623;
+}
