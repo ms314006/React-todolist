@@ -72,16 +72,24 @@ class ConnectInputTask extends React.Component {
             alert('成功新增！')
             //關閉新增畫面
             this.props.closeAdd()
-            //清空資料
+            //初始化資料資料
+            this.resetData()
             this.setState({id:'',name:'',date:'',time:'',file:'',commit:'',important:'',complete:false})
             //不受控組件另外處理
             this.filebox.current.value = ''
             //星星要點掉
-            this.tagImportant()
+            this.star.current.className = this.star.current.className.replace('fas fa-star', 'far fa-star')
+            this.star.current.classList.remove('iconImportant')
+            this.inputTasksTitle.current.classList.remove("important")
+            this.name.current.classList.remove("important")
             //刪除線的樣式也要拿掉
             this.name.current.classList.remove('complete')
         }
     }
+
+resetData(){
+    
+}
 
     render() {
         return (
