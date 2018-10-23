@@ -73,7 +73,6 @@ class ConnectInputTask extends React.Component {
             //關閉新增畫面
             this.props.closeAdd()
             //初始化資料資料
-            this.resetData()
             this.setState({id:'',name:'',date:'',time:'',file:'',commit:'',important:'',complete:false})
             //不受控組件另外處理
             this.filebox.current.value = ''
@@ -86,10 +85,6 @@ class ConnectInputTask extends React.Component {
             this.name.current.classList.remove('complete')
         }
     }
-
-resetData(){
-    
-}
 
     render() {
         return (
