@@ -21,7 +21,7 @@ class InputTasksForm extends React.Component {
                         <input name="file" type="file" class="inputStyle" 
                                 ref = {this.props.filebox}
                                 onChange = {this.props.changeState} /><br/>
-                        <span class="inputStyle">{this.props.fileName}</span>
+                        <span class="inputStyle">{this.props.stateData.file}</span>
                     </div>
                     <InputName className="far fa-comment-dots" inputName="Comment" />
                     <div class="inputForm">
