@@ -5,52 +5,35 @@ class List extends React.Component {
 
     constructor(props) {
         super(props)
-        this.tagComplete = this.tagComplete.bind(this)
-        this.tagImportant = this.tagImportant.bind(this)
-        this.openEdit = this.openEdit.bind(this)
-        this.closeEdit = this.closeEdit.bind(this)
+        this.changeState = this.changeState.bind(this)
 
-        this.editTasks = React.createRef()
         this.list = React.createRef()
+        this.state = this.props.listData
 
-        this.state = {important:this.props.listData.important
-                        ,complete:this.props.listData.complete}
     }
 
-    tagComplete(event) {
-        this.setState({complete:event.target.checked})
-    }
-
-    tagImportant() {
-        //如果現在不是重要的就把它變重要的
-        if (this.state.important == '') {
-            this.setState({important:'Y'})
+    changeState(type) {
+        switch (type) {
+            case "complete": {
+                this.setState({ complete: window.event.target.checked })
+                break;
+            }
+            case "important": {
+                if (this.state.important == '')
+                    this.setState({ important: 'Y' })
+                else
+                    this.setState({ important: '' })
+                break;
+            }
         }
-        else {
-            this.setState({important:''})
-        }
-    }
-
-    openEdit(event) {
-        if (event.target.className.indexOf('icon') === -1 &&
-            event.target.className.indexOf('taskChk') === -1) {
-            this.list.current.style.display = 'none'
-            this.editTasks.current.style.display = ''
-        }
-    }
-
-    closeEdit() {
-        this.editTasks.current.style.display = 'none'
-        this.list.current.style.display = ''
     }
 
 
     render() {
-        //初始化組件
+        console.log(this.state.date)
         return (
             <div class="listBlock">
                 <div class={' list ' + (this.state.important == 'Y' ? ' important ' : '')} 
-                        onClick={this.openEdit}
                         ref = {this.list}>
 
                     <input type="checkbox" class="taskChk" 
@@ -61,7 +44,7 @@ class List extends React.Component {
                             class={' taskTitle ' + 
                                     (this.state.complete ? ' complete ' : '') +
                                     (this.state.important ? ' important ' : '') }
-                            value={this.props.listData.name}  />
+                            value={this.state.name}  />
 
                     <i class={this.state.important == 'Y' ? 
                             ' fas fa-star fa-lg iconImportant icon' : ' far fa-star fa-lg icon'}
@@ -69,22 +52,17 @@ class List extends React.Component {
 
                     <i class="fas fa-pen fa-lg icon"></i>
                     <div class="listIcon">
-                        {this.props.listData.date != '' ? 
+                        {this.state.date != '' ? 
                         <i class="far fa-calendar-alt icon"></i>: ''}
-                        {this.props.listData.date != '' ?
-                        ` ${this.props.listData.date.substring(5).replace('-','/')} ` : ''}
+                        {this.state.date != '' ?
+                        ` ${this.state.date.substring(5).replace('-','/')} ` : ''}
                         
-                        {this.props.listData.file != '' ? 
+                        {this.state.file != '' ? 
                         <i class="fas fa-file icon"></i> : ''}
 
-                        {this.props.listData.commit != '' ? 
+                        {this.state.commit != '' ? 
                         <i class="far fa-comment-dots icon"></i> : ''}
                     </div>
-                </div>
-                
-                <div ref={this.editTasks} style={{ display: "none" }}>
-                    <InputTask closeAdd={this.closeEdit} 
-                                listData = {this.props.listData}/>
                 </div>
             </div>
         )

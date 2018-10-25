@@ -7,12 +7,8 @@ import { addTodoList } from "../../actions"
 class ConnectInputTask extends React.Component {
     constructor(props) {
         super(props)
-        if (this.props.listData) {
-            this.state = this.props.listData
-        }
-        else {
-            this.state = { id: '', name: '', date: '', time: '', file: '', commit: '', important: '', complete: false }
-        }        
+        this.state = { id: '', name: '', date: '', time: '', file: '', commit: '', important: '', complete: false }
+             
         this.changeState = this.changeState.bind(this)
         this.submitTodo = this.submitTodo.bind(this)
         this.tagImportant = this.tagImportant.bind(this)
