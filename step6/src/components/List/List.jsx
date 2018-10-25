@@ -27,34 +27,36 @@ class List extends React.Component {
 
     render() {
         return (
-            <div class={' list ' + (this.state.important == 'Y' ? ' important ' : '')} >
+            <div class="listBlock">
+                <div class={' list ' + (this.state.important == 'Y' ? ' important ' : '')} >
 
-                <input type="checkbox" class="taskChk"
-                    checked={this.state.complete}
-                    onChange={this.tagComplete} />
+                    <input type="checkbox" class="taskChk"
+                        checked={this.state.complete}
+                        onChange={this.tagComplete} />
 
-                <input type="text"
-                    class={' taskTitle ' +
-                        (this.state.complete ? ' complete ' : '') +
-                        (this.state.important ? ' important ' : '')}
-                    value={this.state.name} />
+                    <input type="text"
+                        class={' taskTitle ' +
+                            (this.state.complete ? ' complete ' : '') +
+                            (this.state.important ? ' important ' : '')}
+                        value={this.state.name} />
 
-                <i class={this.state.important == 'Y' ?
-                    ' fas fa-star fa-lg iconImportant icon' : ' far fa-star fa-lg icon'}
-                    onClick={this.tagImportant}></i>
+                    <i class={this.state.important == 'Y' ?
+                        ' fas fa-star fa-lg iconImportant icon' : ' far fa-star fa-lg icon'}
+                        onClick={this.tagImportant}></i>
 
-                <i class="fas fa-pen fa-lg icon"></i>
-                <div class="listIcon">
-                    {this.state.date != '' ?
-                        <i class="far fa-calendar-alt icon"></i> : ''}
-                    {this.state.date != '' ?
-                        ` ${this.state.date.substring(5).replace('-', '/')} ` : ''}
+                    <i class="fas fa-pen fa-lg icon"></i>
+                    <div class="listIcon">
+                        {this.state.date != '' ?
+                            <i class="far fa-calendar-alt icon"></i> : ''}
+                        {this.state.date != '' ?
+                            ` ${this.state.date.substring(5).replace('-', '/')} ` : ''}
 
-                    {this.state.file != '' ?
-                        <i class="fas fa-file icon"></i> : ''}
+                        {this.state.file != '' ?
+                            <i class="fas fa-file icon"></i> : ''}
 
-                    {this.state.commit != '' ?
-                        <i class="far fa-comment-dots icon"></i> : ''}
+                        {this.state.commit != '' ?
+                            <i class="far fa-comment-dots icon"></i> : ''}
+                    </div>
                 </div>
             </div>
         )
