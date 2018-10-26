@@ -44,12 +44,12 @@ class ConnectInputTask extends React.Component {
         else {
             this.props.addTodoList(this.state)
             alert('成功新增！')
-            //關閉新增畫面
-            this.props.closeAdd()
             //初始化資料資料(這裡留著important:'Y'，等等透過事件初始化他)
             this.setState({ id: '', name: '', date: '', time: '', file: '', commit: '', important: '', complete: false })
             //不受控組件另外處理
             this.filebox.current.value = ''
+            //關閉新增畫面
+            this.props.closeAdd()
         }
     }
 
