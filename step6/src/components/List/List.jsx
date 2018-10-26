@@ -32,7 +32,7 @@ class List extends React.Component {
 
                     <input type="checkbox" class="taskChk"
                         checked={this.state.complete}
-                        onChange={this.changeState} />
+                        onChange={this.changeState.bind(this,'complete')} />
 
                     <input type="text"
                         class={' taskTitle ' +
@@ -42,7 +42,7 @@ class List extends React.Component {
 
                     <i class={this.state.important == 'Y' ?
                         ' fas fa-star fa-lg iconImportant icon' : ' far fa-star fa-lg icon'}
-                        onClick={this.changeState}></i>
+                        onClick={this.changeState.bind(this,'important')}></i>
 
                     <i class="fas fa-pen fa-lg icon"></i>
                     <div class="listIcon">
