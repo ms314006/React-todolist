@@ -5,7 +5,8 @@ class List extends React.Component {
         super(props)
         this.changeState = this.changeState.bind(this)
 
-        this.state = this.props.listData
+        this.state = {important:this.props.listData.important
+                        ,complete:this.props.listData.complete}
 
     }
     changeState(type) {
@@ -38,7 +39,7 @@ class List extends React.Component {
                         class={' taskTitle ' +
                             (this.state.complete ? ' complete ' : '') +
                             (this.state.important ? ' important ' : '')}
-                        value={this.state.name} />
+                        value={this.props.listData.name} />
 
                     <i class={this.state.important == 'Y' ?
                         ' fas fa-star fa-lg iconImportant icon' : ' far fa-star fa-lg icon'}
@@ -46,15 +47,15 @@ class List extends React.Component {
 
                     <i class="fas fa-pen fa-lg icon"></i>
                     <div class="listIcon">
-                        {this.state.date != '' ?
+                        {this.props.listData.date != '' ?
                             <i class="far fa-calendar-alt icon"></i> : ''}
-                        {this.state.date != '' ?
-                            ` ${this.state.date.substring(5).replace('-', '/')} ` : ''}
+                        {this.props.listData.date != '' ?
+                            ` ${this.props.listData.date.substring(5).replace('-', '/')} ` : ''}
 
-                        {this.state.file != '' ?
+                        {this.props.listData.file != '' ?
                             <i class="fas fa-file icon"></i> : ''}
 
-                        {this.state.commit != '' ?
+                        {this.props.listData.commit != '' ?
                             <i class="far fa-comment-dots icon"></i> : ''}
                     </div>
                 </div>
