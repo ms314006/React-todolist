@@ -9,8 +9,9 @@ class List extends React.Component {
         this.openEdit = this.openEdit.bind(this)
         this.closeEdit = this.closeEdit.bind(this)
 
-        this.state = this.props.listData
-        this.state.editTasks = null
+        this.state = {important:this.props.listData.important
+            ,complete:this.props.listData.complete
+            ,editTasks:null}
 
         this.list = React.createRef()
     }
