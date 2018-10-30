@@ -36,7 +36,7 @@ class ConnectList extends React.Component {
     }
 
     componentDidUpdate(){
-        //this.props.editTodoList(this.state)
+        this.props.editTodoList(this.state)
     }
 
     openEdit(event) {
