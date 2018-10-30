@@ -5,7 +5,7 @@ import {List} from "../List"
 class ConnectTodoLists extends React.Component{
     render(){
         let Lists = this.props.data.map((item)=>{
-            return <List listData = {item} />
+            return <List key={item.id} listData = {item} />
         })
         return (
             <div>

@@ -8,6 +8,7 @@ class ConnectList extends React.Component {
     constructor(props) {
         super(props)
         this.changeState = this.changeState.bind(this)
+        this.updateTodolist = this.updateTodolist.bind(this)
         this.openEdit = this.openEdit.bind(this)
         this.closeEdit = this.closeEdit.bind(this)
 
@@ -22,21 +23,23 @@ class ConnectList extends React.Component {
     changeState(type) {
         switch (type) {
             case "complete": {
-                this.setState({ complete: window.event.target.checked })
+                this.setState({ complete: window.event.target.checked },this.updateTodolist)
                 break;
             }
             case "important": {
-                if (this.state.important == '')
-                    this.setState({ important: 'Y' })
+                if (this.state.important === '')
+                    this.setState({ important: 'Y' },this.updateTodolist)
                 else
-                    this.setState({ important: '' })
+                    this.setState({ important: '' },this.updateTodolist)
                 break;
             }
         }
     }
 
-    componentDidUpdate(){
-        this.props.editTodoList(this.state)
+    updateTodolist(){
+        let updateList = Object.assign({},this.props.listData)
+        updateList = {...updateList,complete:this.state.complete,important:this.state.important}
+        this.props.editTodoList(updateList)
     }
 
     openEdit(event) {
