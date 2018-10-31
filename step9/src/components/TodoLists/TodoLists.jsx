@@ -9,12 +9,11 @@ class ConnectTodoLists extends React.Component {
             .sort((f, s) => { return f.important < s.important ? 1 : -1 })
             .sort((f, s) => { return f.complete > s.complete ? 1 : -1 })
 
+        let todoCount = 0
         let Lists = this.props.data.map((item) => {
+            if(!item.complete){todoCount++}
             return <List key={item.id} listData={item} />
         })
-
-        let todoCount = 0
-        this.props.data.map((item)=>{if(!item.complete){todoCount++}})
 
         return (
             <div>
