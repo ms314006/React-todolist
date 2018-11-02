@@ -24,7 +24,15 @@ class ConnectTodoLists extends React.Component {
                     break;
                 }
             }
-            todoCount++
+
+            //算數量
+            if(this.props.page){
+                todoCount++
+            }
+            else if(!item.complete){
+                todoCount++
+            }
+
             return <List key={item.id} listData={item} />
         })
 
