@@ -6,8 +6,9 @@ class ConnectTodoLists extends React.Component {
     render() {
         //先排序
         this.props.data
-            .sort((f, s) => { return f.important > s.important ? 1 : -1 })
+            .sort((f, s) => { return f.important < s.important ? 1 : -1 })
             .sort((f, s) => { return f.complete > s.complete ? 1 : -1 })
+        console.log(this.props.data)
 
         let todoCount = 0
         let Lists = this.props.data.map((item) => {
