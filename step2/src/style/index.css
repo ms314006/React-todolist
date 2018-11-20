@@ -32,12 +32,12 @@ body{
     text-align: center;
 }
 
-.InputTasksForm{
+.inputTasksForm{
     width: 620px;
     margin: 0 auto;
 }
 
-.InputTask{
+.inputTask{
     height: 385px;
     background: #F2F2F2;
     text-align: left;

@@ -5,7 +5,7 @@ import {TodoLists} from "../TodoLists"
 class MyTasks extends React.Component{
     render(){
         return (
-            <div class="InputTasksForm">
+            <div class="inputTasksForm">
                 <AddTask />
                 <TodoLists />
             </div>

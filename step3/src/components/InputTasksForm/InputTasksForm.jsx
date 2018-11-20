@@ -4,8 +4,8 @@ import { InputName } from "../InputName"
 class InputTasksForm extends React.Component {
     render() {
         return (
-            <div class="InputTasksForm">
-                <div class="InputTask">
+            <div>
+                <div class="inputTask">
                     <InputName className="fas fa-calendar-alt" inputName="Deadline" />
                     <div class="inputForm">
                         <input type="date" class="inputStyle inputDateTime" 

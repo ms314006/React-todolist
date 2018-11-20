@@ -5,7 +5,7 @@ class InputTasksForm extends React.Component {
     render() {
         return (
             <div>
-                <div class="InputTask">
+                <div class="inputTask">
                     <InputName className="fas fa-calendar-alt" inputName="Deadline" />
                     <div class="inputForm">
                         <input name="date" type="date" class="inputStyle inputDateTime" 
